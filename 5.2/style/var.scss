@@ -1,0 +1,36 @@
+$font_georgia: 'Georgia', sans-serif;
+$font_open_sans: 'Open Sans', sans-serif;
+$null: initial;
+
+@mixin font-family_font-size_color_line-height($font_family, $font-size,$color,$line-height)
+{
+	font-family: $font_family;
+	font-size: $font-size;
+	color: $color;
+	line-height: $line-height;
+    
+}
+@mixin width_height($width, $height){
+    width: $width;
+    height: $height;
+}
+@mixin max-min-width_height($max-width, $width, $min-width, $height){
+    max-width: $max-width;
+    width: $width;
+    min-width: $min-width;
+    height: $height;
+}
+@mixin appearance($appearance, $-moz-appearance, $-webkit-appearance){
+    appearance: $appearance;
+    -moz-appearance: $-moz-appearance;
+    -webkit-appearance: $-webkit-appearance;
+}
+@mixin border_w_c_s_r($border-width, $border-color, $border-style, $border-radius){
+    border-width: $border-width;
+    border-color: $border-color;
+    border-style: $border-style;
+    border-radius: $border-radius;
+}
+
+
+

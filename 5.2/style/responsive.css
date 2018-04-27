@@ -1,0 +1,246 @@
+@media screen and (min-width: 1824px) {
+  .header_menu,
+  .work_place {
+    width: 50%;
+  }
+  .work_place_photo,
+  .work_place_sidebar {
+    width: 34.375%;
+    margin-right: 6.25%;
+  }
+  .work_place_photo p img {
+    width: 100%;
+  }
+  .work_place_quote,
+  .work_place_about_me {
+    width: 59.375%;
+  }
+}
+
+@media screen and (min-width: 1224px) and (max-width: 1823px) {
+  .header_menu,
+  .work_place,
+  .block_sidebar_film {
+    width: 78.43137254901961%;
+  }
+  .work_place_photo,
+  .work_place_sidebar {
+    width: 34.375%;
+    margin-right: 6.25%;
+  }
+  .work_place_photo p img {
+    width: 100%;
+  }
+  .work_place_quote,
+  .work_place_about_me {
+    width: 59.375%;
+  }
+}
+
+@media screen and (min-width: 1024px) and (max-width: 1223px) {
+  .header_menu,
+  .work_place,
+  .block_sidebar_film {
+    width: 78.43137254901961%;
+  }
+  .work_place_photo,
+  .work_place_sidebar {
+    width: 34.375%;
+    margin-right: 6.25%;
+  }
+  .work_place_quote,
+  .work_place_about_me {
+    width: 59.375%;
+  }
+  .work_place_photo p img {
+    width: 100%;
+    height: 100%;
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+  .work_place,
+  .work_place_photo,
+  .work_place_quote,
+  .work_place_sidebar {
+    width: 90%;
+  }
+  .work_place_quote > .place_quote blockquote p {
+    color: black;
+  }
+  .header_menu {
+    width: 100%;
+  }
+  .header_menu_list {
+    width: 90%;
+    margin: 0 auto;
+  }
+  .work_place_photo p {
+    text-align: center;
+  }
+  .work_place_photo img {
+    width: 384px;
+    max-width: 690px;
+  }
+  .place_quote {
+    float: left;
+    width: 50%;
+    text-align: center;
+  }
+  .work_place_quote > .place_quote p {
+    text-align: center;
+    color: black;
+  }
+  .work_place_quote .name h1,
+  .work_place_quote .line {
+    margin: 30px 0 0 50%;
+  }
+  .work_place_sidebar {
+    margin-left: 10%;
+    margin-bottom: 50px;
+  }
+  .work_place_sidebar_book,
+  .work_place_sidebar_film {
+    float: left;
+  }
+  .work_place_sidebar .work_place_sidebar_film {
+    margin: 0;
+  }
+  .work_place_about_me {
+    margin: 0 20px;
+  }
+  .block_sidebar_film {
+    width: 90%;
+  }
+  .block_sidebar_film_block {
+    width: 100%;
+  }
+  .film_poster_one,
+  .film_poster_two,
+  .film_poster_three,
+  .film_poster_four {
+    width: 33%;
+    float: left;
+    margin-right: 5%;
+  }
+}
+
+@media screen and (min-width: 320px) and (max-width: 767px) {
+  .work_place_photo,
+  .work_place_sidebar,
+  .work_place_quote {
+    width: 100%;
+  }
+  .work_place_quote > .place_quote blockquote p {
+    color: black;
+  }
+  .header_menu,
+  .work_place,
+  .work_place_quote {
+    width: 90%;
+  }
+  .header_menu_list {
+    width: 94%;
+    margin: 0 auto;
+  }
+  .work_place_photo p {
+    text-align: center;
+  }
+  .work_place_photo img {
+    width: 50.0651890482399%;
+  }
+  .place_quote {
+    float: left;
+    width: 100%;
+    text-align: center;
+  }
+  .work_place_quote > .place_quote p,
+  .work_place_quote .name h1 {
+    text-align: center;
+    color: black;
+  }
+  .corection_location_input {
+    background-position: 95% center;
+  }
+  .work_place_sidebar li {
+    width: 100%;
+  }
+  .work_place_sidebar .work_place_sidebar_film,
+  .work_place_sidebar_book {
+    margin: 0 0 20px 5%;
+  }
+  .work_place_about_me {
+    margin: 0 20px;
+  }
+  .block_sidebar_film {
+    width: 90%;
+  }
+  .block_sidebar_film_block {
+    width: 100%;
+  }
+  .film_poster_one,
+  .film_poster_two,
+  .film_poster_three,
+  .film_poster_four {
+    width: 33%;
+    float: left;
+    margin-right: 5%;
+  }
+  form {
+    width: 90%;
+  }
+  .text_format_input {
+    width: 100%;
+  }
+  footer {
+    height: 100%;
+  }
+  .line_right,
+  .line_left {
+    display: none;
+  }
+  .work_place_quote {
+    margin-top: 10px;
+  }
+  .work_place_quote .line {
+    margin: auto;
+  }
+  .work_place_quote > .place_quote p {
+    line-height: 1;
+  }
+  .work_place_sidebar li p {
+    width: 90%;
+  }
+  footer p {
+    height: 100%;
+  }
+  footer p {
+    line-height: 35px;
+    padding: 0 20px;
+  }
+}
+
+@media screen and (min-width: 320px) and (max-width: 726px) {
+  .work_place_quote > .place_quote blockquote p {
+    color: black;
+  }
+  .header_menu_list {
+    height: 50px;
+  }
+  footer p {
+    padding: 10px;
+  }
+}
+
+@media screen and (max-width: 744px) {
+  .header_menu_list ul {
+    background: url("/icon/submenu.png") no-repeat;
+    height: 50px;
+    width: 50xp;
+    background-position: center center;
+  }
+  .header_menu_list ul li {
+    display: none;
+  }
+}
+/*# sourceMappingURL=responsive.css.map */

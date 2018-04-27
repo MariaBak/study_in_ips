@@ -1,0 +1,126 @@
+header {
+    height: 50px;
+}
+
+.clear {
+    clear: both;
+}
+
+.header_menu {
+    width: 960px;
+    margin: 0 480px;
+}
+
+.header_menu_list li {
+    line-height: 49px;
+    display: inline-block;
+    font-size: 19px;
+    font-family: "Georgia";
+    color: rgb(51, 51, 51);
+    margin: 0 -2px;
+    transition-property: margin;
+}
+
+.header_menu_list .list a {
+    background: url(/icon/about_me.png) no-repeat 21px 17px;
+    padding: 0 21px 0 45px;
+    transition: 1s;
+}
+
+.header_menu_list .list1 a {
+    background: url(/icon/hobby_icon.png) no-repeat 20px 18px;
+    padding: 0 22px 0 46px;
+    transition: 1s;
+}
+
+.header_menu_list .list2 a {
+    background: url(/icon/video_icon.png) no-repeat 19px center;
+    padding: 0 24px 0 45px;
+    transition: 1s;
+}
+
+.header_menu_list p {
+    padding-top: 1px;
+}
+
+.header_menu_list a {
+    display: block;
+}
+
+.header_menu_list ul li:hover a {
+    color: rgb(245, 245, 245);
+    transition: 1s;
+}
+
+.header_menu_list .list a:hover {
+    transition: 1s;
+    background: url(/icon/about_me_invers.png) no-repeat 21px 17px;
+    background-color: rgb(21, 169, 140);
+}
+
+.header_menu_list .list1 a:hover {
+    transition: 1s;
+    background: url(/icon/hobby_icon_invers.png) no-repeat 20px 18px;
+    background-color: rgb(21, 169, 140);
+}
+
+.header_menu_list .list2 a:hover {
+    transition: 1s;
+    background: url(/icon/video_icon_invers.png) no-repeat 19px center;
+    background-color: rgb(21, 169, 140);
+}
+
+.header_background {
+    height: 400px;
+    background: url(/image/background.jpeg) no-repeat;
+}
+
+.header_background::before {
+    content: "asdasd";
+    background-color: #000;
+    height: 400px;
+    width: 100%;
+    position: absolute;
+    z-index: 1;
+    opacity: 0.502;
+}
+
+.work_place {
+    width: 960px;
+    margin: 0 auto;
+    position: relative;
+    top: -190px;
+    z-index: 1;
+}
+
+.work_place_photo {
+    float: left;
+}
+
+.work_place_photo img {
+    border-radius: 2px;
+    width: 330px;
+    height: 350px;
+}
+
+.work_place_quote {
+    width: 570px;
+    height: 350px;
+    float: right;
+    border: 1px solid black;
+}
+
+.work_place_quote {
+    font-size: 28px;
+    font-family: "Georgia";
+    color: rgb(255, 255, 255);
+    font-style: italic;
+}
+
+.work_place_sidebar {
+    float: left;
+}
+
+.work_place_about_me {
+    float: right;
+}

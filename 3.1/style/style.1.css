@@ -1,0 +1,580 @@
+header 
+{
+  	height: 50px;
+}
+
+.clear 
+{
+  	clear: both;
+}
+
+/* start menu */
+.header_menu 
+{
+	width: 960px;
+	margin: 0 auto;
+}
+
+.header_menu_list ul li 
+{
+	line-height: 50px;
+	float: left;
+	font-size: 19px;
+	font-family: 'Georgia', sans-serif;
+	color: #333333;
+	list-style: none;
+}
+
+.header_menu_list .list_about_me a 
+{
+  	background: url('/icon/about_me.png') no-repeat 21px 17px;
+}
+
+.header_menu_list .list_book a 
+{
+ 	background: url('/icon/hobby_icon.png') no-repeat 20px 18px;
+}
+
+.header_menu_list .list_film a 
+{
+  	background: url('/icon/video_icon.png') no-repeat 18px center;
+}
+
+.header_menu_list a 
+{
+	display: block;
+	height: 50px;
+	color: #333333;
+	transition: 1s;
+	padding: 0px 21px 0 46px;
+}
+
+.header_menu_list a:hover 
+{
+	color: whitesmoke;
+	background-color: #15a98c;
+	transition: 1s;
+}
+
+.header_menu_list .list_about_me a:hover 
+{
+	background-image: url(/icon/about_me_invers.png);
+	background-position: 21px 17px;
+}
+
+.header_menu_list .list_book a:hover 
+{
+	background-image: url(/icon/hobby_icon_invers.png);
+	background-position: 20px 18px;
+}
+
+.header_menu_list .list_film a:hover 
+{
+	background-image: url(/icon/video_icon_invers.png);
+	background-position: 18px center;
+}
+
+/* end menu */
+/* start background image */
+.header_background 
+{
+  	height: 210px;
+}
+
+.header_background img 
+{
+	width: 100%;
+	height: 400px;
+}
+
+.header_background:before 
+{
+	content: "";
+	background-color: #000;
+	height: 400px;
+	width: 100%;
+	position: absolute;
+	z-index: 1;
+	opacity: 0.502;
+}
+
+/* end background image */
+.work_place 
+{
+	width: 960px;
+	margin: 0 auto;
+	position: relative;
+	z-index: 1;
+	margin-bottom: 62px;
+}
+
+/* start avatarka */
+.work_place_photo 
+{
+  	float: left;
+}
+
+.work_place_photo img 
+{
+	border-radius: 5px;
+	width: 330px;
+	height: 350px;
+}
+
+/* end avatarta */
+/* start quote */
+.work_place_quote 
+{
+	width: 570px;
+	float: right;
+	text-transform: capitalize;
+}
+
+.work_place_quote .quot 
+{
+	margin-top: 25px;
+	font-size: 28px;
+	font-family: 'Georgia', sans-serif;
+	color: #fff;
+	font-style: italic;
+	line-height: 1.5;
+	text-align: left;
+}
+
+.work_place_quote > p 
+{
+	font-size: 16px;
+	font-family: 'Open Sans', sans-serif;
+	color: #fff;
+	font-weight: 600;
+	line-height: 2.875;
+}
+
+/* end quote */
+/* start name */
+.name h1 
+{
+	font-size: 48px;
+	font-family: 'OpenSans', sans-serif;
+	color: #333333;
+	font-weight: bold;
+	text-align: left;
+	margin: 117px 0 13px 0;
+}
+
+.line 
+{
+	width: 60px;
+	height: 6px;
+	background-color: #45c3aa;
+	border-radius: 3px;
+	margin-top: 23px;
+}
+
+/* end name */
+/* start sidebar */
+.work_place_sidebar 
+{
+	margin-top: 43px;
+	float: left;
+	width: 330px;
+}
+
+.work_place_sidebar span 
+{
+	font-size: 24px;
+	font-family: 'Open Sans', sans-serif;
+	color: #15a98c;
+	font-weight: 600;
+}
+
+.work_place_sidebar ul 
+{
+ 	margin: 16px 0 0 4px;
+}
+
+.work_place_sidebar ul li 
+{
+  	list-style: none;
+}
+
+.work_place_sidebar ul li::before 
+{
+	content: url('/icon/marker.png');
+	float: left;
+	margin-top: 7px;
+	margin-right: 11px;
+}
+
+.work_place_sidebar ol 
+{
+	margin: 15px 0 0 0px;
+	list-style: none;
+}
+
+.work_place_sidebar p 
+{
+	font-size: 19px;
+	font-family: 'Georgia', sans-serif;
+	color: #555555;
+	line-height: 1.895;
+}
+
+.work_place_sidebar_film 
+{
+  	margin-top: 43px;
+}
+
+/* end sidebar */
+.work_place_about_me 
+{
+	float: right;
+	width: 570px;
+}
+
+.work_place_about_me > p 
+{
+	font-size: 19px;
+	margin-top: 4px;
+	font-family: 'Georgia', sans-serif;
+	color: #555555;
+	line-height: 1.736;
+	margin-bottom: 42px;
+}
+
+.my_hobby span 
+{
+	font-size: 36px;
+	font-family: 'Open Sans', sans-serif;
+	color: #333333;
+	line-height: 1.167;
+}
+
+.my_hobby p 
+{
+	margin-top: 15px;
+	font-size: 19px;
+	font-family: 'Georgia', sans-serif;
+	color: #555555;
+	line-height: 1.736;
+	margin-left: 2px;
+}
+
+.write_me 
+{
+	margin-top: 45px;
+	width: 160px;
+	font-size: 19px;
+	font-family: 'Georgia', sans-serif;
+	line-height: 23px;
+	margin-left: 1px;
+}
+
+.write_me a 
+{
+	line-height: 19px;
+	border-bottom: 2px solid #96d1c2;
+	color: #15a98b;
+}
+
+.write_me p 
+{
+  	color: #15a98b;
+}
+
+.write_me a:hover 
+{
+ 	 color: #098d72;
+}
+
+.block_film 
+{
+	padding-top: 36px;
+	background: #f9f9f9;
+	width: 100%;
+}
+
+.block_sidebar_film 
+{
+	width: 1200px;
+	margin: 0 auto;
+}
+
+.block_sidebar_film > h2 
+{
+	font-size: 36px;
+	font-family: 'Open Sans', sans-serif;
+	color: #333333;
+	font-weight: 400;
+}
+
+.block_sidebar_film_block 
+{
+  	margin-top: 34px;
+}
+
+.float_film 
+{
+	float: left;
+	padding-right: 20px;
+}
+
+.block_sidebar_film_block 
+{
+  	width: 285px;
+}
+
+.film_poster_one,
+.film_poster_two,
+.film_poster_three,
+.film_poster_four 
+{
+	width: 285px;
+	height: 190px;
+	border-radius: 5px;
+	background-color: #464646;
+	line-height: 190px;
+	margin-bottom: 17px;
+}
+
+.film_poster_one img,
+.film_poster_two img,
+.film_poster_three img,
+.film_poster_four img 
+{
+	width: 285px;
+	height: 100%;
+	border-radius: 5px;
+}
+
+.no_padding {
+  	padding: 0;
+}
+
+.block_sidebar_film_block span 
+{
+	font-size: 22px;
+	font-family: 'Open Sans', sans-serif;
+	color: #333333;
+	font-weight: bold;
+	line-height: 2;
+}
+
+.block_sidebar_film_block p 
+{
+	font-size: 16px;
+	font-family: 'Georgia', sans-serif;
+	color: #555555;
+	line-height: 1.75;
+	margin-top: 11px;
+}
+
+.btn_all_film 
+{
+	width: 100%;
+	height: 50px;
+	padding-bottom: 60px;
+}
+
+.all_film 
+{
+	margin: 0 auto;
+	width: 220px;
+	height: 50px;
+	margin: 63px auto 71px;
+	border-radius: 5px;
+	background-color: #15a98c;
+}
+
+.all_film a 
+{
+	display: block;
+	width: 100%;
+	text-align: center;
+	line-height: 50px;
+	font-size: 19px;
+	font-family: 'Georgia', sans-serif;
+	color: #f5f5f5;
+}
+
+.all_film a:hover 
+{
+  	border-radius: 5px;
+  	background-color: #098d72;
+}
+
+.feedback 
+{
+  	width: 100%;
+}
+
+.feedback .feedback_form 
+{
+	width: 698px;
+	margin: 0 auto;
+}
+
+.main_text 
+{
+  	width: 698px;
+}
+
+.main_text_label 
+{
+	padding-top: 45px;
+	position: relative;
+	left: -5px;
+	font-size: 36px;
+	font-family: 'Open Sans light', sans-serif;
+	color: #333333;
+	text-align: center;
+	font-weight: 300;
+}
+
+.line_left,
+.line_right 
+{
+  	margin-bottom: 12px;
+  	position: relative;
+}
+
+.line_left 
+{
+  	left: -17px;
+}
+
+.line_right 
+{
+  	right: -14px;
+}
+
+form 
+{
+	width: 540px;
+	margin: 60px auto 0;
+}
+
+.text_format_label 
+{
+	font-size: 20px;
+	font-family: "Open Sans", sans-serif;
+	color: #333333;
+	line-height: 50px;
+	margin-left: -1px;
+	margin-bottom: -24px;
+	margin-top: 15px;
+}
+
+.input_style 
+{
+	border-width: 2px;
+	border-style: solid;
+	border-radius: 3px;
+	width: 536px;
+	height: 46px;
+}
+
+.corection_location_label 
+{
+	margin-bottom: -23px;
+	margin-top: 16px;
+}
+
+.corection_location_input 
+{
+	height: 50px;
+	-moz-appearance: none;
+	-webkit-appearance: none;
+	width: 540px;
+	background: url('/icon/arrow_down.png') no-repeat 498px 18px;
+}
+
+.corection_gender_input 
+{
+  	margin-top: 32px;
+  	margin-bottom: -23px;
+}
+
+.corection_msg 
+{
+  	margin-top: 27px;
+}
+
+.input_style,
+textarea 
+{
+  	border-color: #c9c9c9;
+}
+
+.input_style:hover,
+textarea:hover 
+{
+  	border-color: #a6a6a6;
+}
+
+.input_style:focus,
+textarea:focus 
+{
+ 	border-color: #15a98c;
+}
+
+textarea 
+{
+	border-width: 2px;
+	border-color: #c9c9c9;
+	border-style: solid;
+	border-radius: 3px;
+	width: 536px;
+	height: 146px;
+	resize: none;
+}
+
+.text_format_input 
+{
+	font-size: 18px;
+	font-family: "Open Sans", sans-serif;
+	color: #555555;
+	line-height: 1.778;
+	text-indent: 16px;
+}
+
+input[type="submit"] 
+{
+	border-radius: 5px;
+	background-color: #15a98c;
+	width: 220px;
+	height: 50px;
+	border: 0;
+	font-size: 19px;
+	font-family: "Georgia", sans-serif;
+	color: whitesmoke;
+	line-height: 50px;
+	margin: 46px 0 50px 0;
+}
+
+input[type="submit"]:hover 
+{
+ 	 background-color: #098d72;
+}
+
+.corection_gender_one 
+{
+	margin-left: 4px;
+	margin-right: 40px;
+}
+
+footer {
+	width: 100%;
+	background-color: #f5f5f5;
+	height: 71px;
+}
+
+footer p 
+{
+	line-height: 65px;
+	text-align: center;
+	font-size: 16px;
+	font-family: 'Georgia', sans-serif;
+	color: #555555;
+}
+/*# sourceMappingURL=style.css.map */
