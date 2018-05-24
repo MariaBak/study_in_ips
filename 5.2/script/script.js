@@ -1,181 +1,168 @@
-window.onload = function () {
-	ListenersButtonFeedback();
-	ListenersButtonFeedbackClose();
-	formCheck();
+window.onload = function () 
+{
+	callForm("writeMe","blackForm","cross","formWriteMe");
+	callForm("createNewFilm","shadow_block_new_film","closeFormNewFilm","block_add_film");	
+	sendValueForm();
+	showHiddenFilm();
+	sendValueForm();
+	checkInputInfo();
+	mobileMenuClose();
 }
 
-function goToHell() {
-	document.getElementsByClassName('feedback_form')[0].style.top = '-100%';
-	document.getElementsByClassName('background_form')[0].style.top = '-100%';
+/* вызовать/закрыть форму "Напиши мне"/"добавить фильм" */
+function callForm(first, second, third, four) 
+{
+
+	document.getElementById(first).addEventListener
+	("click",function (){clearInput();openCloseWriteMe(second, four);},	false);
+
+	document.getElementById(second).addEventListener
+	("click",function () {openCloseWriteMe(second, four);},false);
+
+	document.getElementById(third).addEventListener
+	("click",function (){openCloseWriteMe(second, four);},false);
+	
+	/* закрыть форму "Напиши мне" */
+	function openCloseWriteMe(second, four) 
+	{
+		document.getElementById(second).classList.toggle("show");	
+		document.getElementById(four).classList.toggle("show");	
+		$("#urlNewFilm").val("");
+        $("#nameNewFIlm").val("");
+        $("#descriptionFilm").val("");
+		event.preventDefault();
+
+	}
 }
 
-function ListenersButtonFeedback() {
-	let blackFon = document.getElementsByClassName('background_form'),
-		feedbackForm = document.getElementsByClassName('feedback_form'),
-		heightScreen = document.documentElement.clientHeight;
+function mobileMenuClose() 
+{	
+	$("#createNewFilm").click(function(e){
+		e.preventDefault();
+		$(".mobile-menu").removeClass('open');
+	});
+	$("#createNewFilm").click(function(e){
+		e.preventDefault();
+		$(".open-button").removeClass('open');
+	});
+	$(".main-menu__link").click(function(e){
+		e.preventDefault();
+		$(".mobile-menu").removeClass('open');
+	});
+	$(".main-menu__link").click(function(e){
+		e.preventDefault();
+		$(".open-button").removeClass('open');
+	});
+}
 
-	document.getElementById('writeMe').addEventListener
+function clearInput() 
+{
+	for (let index = 0; index < document.getElementsByClassName("control").length; index++) 
+		{
+			document.getElementsByClassName("control")[index].classList.remove("error");
+		}
+}
+/* проверка заполненных форм */
+function checkInputInfo()
+{
+	for (let index = 0; index < document.getElementsByClassName("control").length; index++) 
+	{
+		document.getElementsByClassName("control")[index].onblur = function()
+		{
+			if (!this.value)
+			{
+				this.classList.add("error");
+			}
+			else
+			{
+				this.classList.remove("error");				
+			}
+		}
+
+		document.getElementsByClassName("control")[index].onfocus = function()
+		{
+			this.classList.remove("error");
+		}
+	}
+	event.preventDefault();
+}
+
+/* новые фильмы */
+function showHiddenFilm() 
+{
+	document.getElementById("allFilm").addEventListener
 	(
-		'click',
-		function () {
-			feedbackForm[0].style.top = (heightScreen - 903) / 2 + 'px';
-			blackFon[0].style.top = '0';
+		"click",
+		function() 
+		{
+			document.getElementById("allFilmHidden").style.display = "block";	
+			document.getElementsByClassName("button_all_film")[0].style.display = "none";
 			event.preventDefault();
 		},
 		false
 	);
+	
 }
-
-function ListenersButtonFeedbackClose() {
-	let closeBackground = document.getElementsByClassName('background_form'),
-		closeCross = document.getElementsByClassName('cross');
-
-	closeBackground[0].addEventListener
-		(
-		'click',
-		goToHell,
-		false
-		);
-
-	closeCross[0].addEventListener
-		(
-		'click',
-		goToHell,
-		false
-		);
-
-}
-
-function formCheck() {
-	let inputText = document.getElementsByClassName('control');
-	let button = document.getElementById('send');
-
-	button.addEventListener(
-		'click',
-		check,
+function sendValueForm() 
+{
+	let formNewFilm = document.getElementById("addNewFIlm"),
+	formSendMail = document.getElementById("send"),
+	controlFilmValue = document.getElementsByClassName("control_film_value");
+	sendForm = document.getElementsByClassName("control_send");
+	
+	formNewFilm.addEventListener(
+		"click",
+		readValueFilm,
 		false
 	);
-
-	for (let count = 0; count < 4;count++)
-	{
-		inputText[count].onblur = function () {
-			if (!this.value) {
-				this.style.border = '1px solid red';
-			}
-			else {
-				this.style.border = '';
-			}
-		}
 	
-		inputText[count].onfocus = function () {
-			this.style.border = '';
-		}
-	}
+	formSendMail.addEventListener(
+		"click",
+		readValue,
+		false	
+	);
+	event.preventDefault();
 
-/* 	inputText[1].onblur = function () {
-		if (!this.value) {
-			this.style.border = '1px solid red';
-		}
-		else {
-			this.style.border = '';
-		}
-	}
-
-	inputText[1].onfocus = function () {
-		this.style.border = '';
-	}
-
-	inputText[2].onblur = function () {
-		if (!this.value) {
-			this.style.border = '1px solid red';
-		}
-		else {
-			this.style.border = '';
-		}
-	}
-
-	inputText[2].onfocus = function () {
-		this.style.border = '';
-	}
- */
-	function check() {
-		let boolCount = 0;
-		for (let count = 0; count < inputText.length; count++) {
-			let text = inputText[count].value;
-
-			if (text === '') {
-				inputText[count].style.border = '1px solid red';
+	function readValue() 
+	{
+		let count;
+		count=0;
+		for (let index = 0; index < sendForm.length; index++)
+		{
+			if (!sendForm[index].value) 
+			{
+				sendForm[index].classList.add("error");	
 			}
-			else {
-				inputText[count].style.border = '';
-				boolCount++;
-			}
+			else
+			{
+				count++;
+			}	
+		}	
+		if (count != 3) 
+		{
 			event.preventDefault();
 		}
-
-		if (boolCount === 3) {
-			let blackFon = document.getElementsByClassName('background_form'),
-				feedbackForm = document.getElementsByClassName('feedback_form');
-			goToHell();
-		}
 	}
-}
-/* фильмы */
 
-let showFilm  = document.getElementById('allFilm');
-
-showFilm.onclick = function allFilmShow() {
-	let buttonFilm = document.getElementsByClassName('button_all_film');
-	let newAddClass = document.getElementsByClassName('dota');
-	let first = new createFilmBlock(firstImage, firstName, firstDescription),
-    	second = new createFilmBlock(secondImage, secondName, secondDescription),
-    	third = new createFilmBlock(thirdImage, thirdName, thirdDescription),
-    	fourth = new createFilmBlock(fourthImage,fourthName,fourthDescription);
-	
-		buttonFilm[0].style.display = 'none';
-		
-		for (let countNew = 0; countNew < 4; )
+	function readValueFilm() 
+	{
+		let count;
+		count=0;
+		for (let index = 0; index < controlFilmValue.length; index++)
 		{
-			newAddClass[countNew].classList.toggle('spec_class');
-			countNew +=1;
+			if (!controlFilmValue[index].value) 
+			{
+				controlFilmValue[index].classList.add("error");	
+			}
+			else
+			{
+				count++;
+			}	
+		}	
+		if (count != 3) 
+		{
+			event.preventDefault();
 		}
-		return false;
 	}
 
-function createFilmBlock(src, name, description) 
-{
-	let findBlock = document.getElementsByClassName('all_flm');
-    let newBlockFilm = document.createElement('div');
-    let subBlockFilm = document.createElement('div');
-    let subImage = document.createElement('img');
-	let newName = document.createElement('span');
-	let newDescription = document.createElement('p');
-        
-		newBlockFilm.classList.add('spec_class', 'block_sidebar_film_block', 'float_film', 'dota');
-		subBlockFilm.classList.add('film_poster_four');
- 		subImage.src = src;
-	    newName.innerText = name;
-    	newDescription.innerText = description;
-    
-    subBlockFilm.appendChild(subImage);
-    newBlockFilm.appendChild(subBlockFilm);
-    newBlockFilm.appendChild(newName);
-    newBlockFilm.appendChild(newDescription);
-    
-    findBlock[0].appendChild(newBlockFilm);
-   
 }
-let firstImage = 'image/1.jpg',
-		secondImage = 'image/2.jpg',
-		thirdImage = 'image/3.jpg',
-		fourthImage = 'image/4.jpeg',
-
-		firstName = 'Побег из шоушенка',
-		secondName = 'Зеленая миля',
-		thirdName = 'Леон',
-		fourthName = 'Интерстеллар',
-
-		firstDescription = 'Успешный банкир Энди Дюфрейн обвинен в убийстве собственной жены и ее любовника. Оказавшись в тюрьме под названием Шоушенк, он сталкивается с жестокостью и беззаконием, царящими по обе стороны решетки. Каждый, кто попадает в эти стены, становится их рабом до конца жизни. Но Энди, вооруженный живым умом и доброй душой, отказывается мириться с приговором судьбы и начинает разрабатывать невероятно дерзкий план своего освобождения.',
-		secondDescription = 'Пол Эджкомб — начальник блока смертников в тюрьме «Холодная гора», каждый из узников которого однажды проходит «зеленую милю» по пути к месту казни. Пол повидал много заключённых и надзирателей за время работы. Однако гигант Джон Коффи, обвинённый в страшном преступлении, стал одним из самых необычных обитателей блока.',
-		thirdDescription = 'Профессиональный убийца Леон, не знающий пощады и жалости, знакомится со своей очаровательной соседкой Матильдой, семью которой расстреливают полицейские, замешанные в торговле наркотиками. Благодаря этому знакомству он впервые испытывает чувство любви, но…',
-		fourthDescription = 'Когда засуха приводит человечество к продовольственному кризису, коллектив исследователей и учёных отправляется сквозь червоточину (которая предположительно соединяет области пространства-времени через большое расстояние) в путешествие, чтобы превзойти прежние ограничения для космических путешествий человека и переселить человечество на другую планету.';

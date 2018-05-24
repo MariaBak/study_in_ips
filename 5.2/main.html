@@ -9,36 +9,40 @@
     <link rel="stylesheet" href="style/normalize.css">
     <link rel="stylesheet" href="style/style.css">
     <link rel="stylesheet" href="style/responsive.css">
+    <link rel="stylesheet" href="style/fm.revealator.jquery.css">
     <title>About Me</title>
 </head>
 
 <body>
+
     <header>
-        <div class="header_menu">
-            <div class="header_menu_list">
-                <ul>
-                    <li class="list_about_me">
-                        <p>
-                            <a href="#">Обо мне</a>
-                        </p>
+        <div class="show_mobile_menu">
+            <p>Меню</p>
+            <a id="mobile_menu_close_icon" href="#" class="open-button">
+                <span></span>
+                <span></span>
+                <span></span>
+            </a>
+        </div>
+        <nav id="mobile_menu_close" class="mobile-menu">
+            <div class="correct_menu">
+                <ul class="main-menu">
+                    <li class="main-menu__item">
+                        <a class="main-menu__link" href="#">Обо мне</a>
                     </li>
-                    <li class="list_book">
-                        <p>
-                            <a href="#">Любимые книги</a>
-                        </p>
+                    <li class="main-menu__item">
+                        <a class="main-menu__link" href="#book">Любимые книги</a>
                     </li>
-                    <li class="list_film">
-                        <p>
-                            <a href="#">Любимые фильмы</a>
-                        </p>
+                    <li class="main-menu__item">
+                        <a class="main-menu__link" href="#film">Любимые фильмы</a>
+                    </li>
+                    <li class="main-menu__item">
+                        <a id="createNewFilm" class="main-menu__link" href="#">Добавить фильм</a>
                     </li>
                 </ul>
-
-                <div class="clear"></div>
             </div>
-        </div>
+        </nav>
     </header>
-
     <div class="header_background">
         <div class="backgroun_image"></div>
     </div>
@@ -65,7 +69,7 @@
         </div>
         <div class="clear"></div>
         <div class="work_place_sidebar">
-            <div class="work_place_sidebar_book">
+            <div class="work_place_sidebar_book" id="book">
                 <span>Любимые книги</span>
                 <ul>
                     <li>
@@ -112,7 +116,7 @@
                     занимаюсь версткой.
                 </p>
             </div>
-            <div class="write_me">
+            <div class="write_me revealator-slideright revealator-delay1 ">
                 <p>
                     <a href="#" id="writeMe">Напиши мне</a> →
                 </p>
@@ -120,51 +124,107 @@
         </div>
         <div class="clear"></div>
     </div>
-    <div class="block_film">
+    <div class="block_film" id="film">
         <div class="block_sidebar_film">
-            <h2>Любимые фильмы</h2>
+            <h2 class=" revealator-slideright revealator-delay1">Любимые фильмы</h2>
             <div class="all_flm">
-                <div class="block_sidebar_film_block float_film">
-                    <div class="film_poster_one">
-                        <img src="image/revolver.jpg" alt="">
+                <div>
+                    <div class="block_sidebar_film_block float_film revealator-slideright revealator-delay1 ">
+                        <div class="film_poster_one">
+                            <img src="image/revolver.jpg" alt="">
+                        </div>
+                        <span>Револьвер</span>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium qui alias, labore unde perferendis
+                            totam aliquam dicta itaque officia corporis quo incidunt tenetur nisi! Earum accusamus voluptates
+                            inventore saepe sint!
+                        </p>
                     </div>
-                    <span>Револьвер</span>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium qui alias, labore unde perferendis
-                        totam aliquam dicta itaque officia corporis quo incidunt tenetur nisi! Earum accusamus voluptates
-                        inventore saepe sint!
-                    </p>
-                </div>
-                <div class="block_sidebar_film_block float_film">
-                    <div class="film_poster_two">
-                        <img src="image/fight_club.jpg" alt="">
+                    <div class="block_sidebar_film_block float_film revealator-slideright revealator-delay3 ">
+                        <div class="film_poster_two">
+                            <img src="image/fight_club.jpg" alt="">
+                        </div>
+                        <span>Бойцовский Клуб</span>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nisi quidem tenetur debitis molestiae,
+                            pariatur, consectetur temporibus ut laboriosam provident ipsum laudantium libero quis dolorem
+                            reprehenderit corrupti est minus autem unde?
+                        </p>
                     </div>
-                    <span>Бойцовский Клуб</span>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nisi quidem tenetur debitis molestiae, pariatur,
-                        consectetur temporibus ut laboriosam provident ipsum laudantium libero quis dolorem reprehenderit
-                        corrupti est minus autem unde?
-                    </p>
-                </div>
-                <div class="block_sidebar_film_block float_film">
-                    <div class="film_poster_three">
-                        <img src="image/ghostintheshell.jpg" alt="">
+                    <div class="block_sidebar_film_block float_film   revealator-slideright revealator-delay2 ">
+                        <div class="film_poster_three">
+                            <img src="image/ghostintheshell.jpg" alt="">
+                        </div>
+                        <span>Призрак в доспехах</span>
+                        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Qui debitis corporis recusandae temporibus
+                            molestias. Deleniti blanditiis pariatur doloribus deserunt. Qui iste, quibusdam beatae modi distinctio
+                            nam nisi laboriosam voluptate ex!
+                        </p>
                     </div>
-                    <span>Призрак в доспехах</span>
-                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Qui debitis corporis recusandae temporibus
-                        molestias. Deleniti blanditiis pariatur doloribus deserunt. Qui iste, quibusdam beatae modi distinctio
-                        nam nisi laboriosam voluptate ex!
-                    </p>
-                </div>
-                <div class="block_sidebar_film_block float_film no_padding">
-                    <div class="film_poster_four">
-                        <img src="image/mrbeen.jpg" alt="">
+                    <div class="block_sidebar_film_block float_film no_padding   revealator-slideright revealator-delay4 ">
+                        <div class="film_poster_four">
+                            <img src="image/mrbeen.jpg" alt="">
+                        </div>
+                        <span>мистер Бин</span>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit earum quis architecto dignissimos deleniti
+                            dolorum tempora dolorem pariatur nisi voluptates doloribus labore, excepturi culpa a non rerum
+                            illum omnis accusantium.</p>
+                        <div class="clear"></div>
                     </div>
-                    <span>мистер Бин</span>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit earum quis architecto dignissimos deleniti
-                        dolorum tempora dolorem pariatur nisi voluptates doloribus labore, excepturi culpa a non rerum illum
-                        omnis accusantium.</p>
+                    <div class="clear"></div>
                 </div>
+                <div id="allFilmHidden" class="all_film_hidden">
+                    <div class="block_sidebar_film_block float_film revealator-slideright revealator-delay1 ">
+                        <div class="film_poster_one">
+                            <img src="image/1.jpg" alt="">
+                        </div>
+                        <span>Побег из шоушенка</span>
+                        <p>
+                            Успешный банкир Энди Дюфрейн обвинен в убийстве собственной жены и ее любовника. Оказавшись в тюрьме под названием Шоушенк,
+                            он сталкивается с жестокостью и беззаконием, царящими по обе стороны решетки. Каждый, кто попадает
+                            в эти стены, становится их рабом до конца жизни. Но Энди, вооруженный живым умом и доброй душой,
+                            отказывается мириться с приговором судьбы и начинает разрабатывать невероятно дерзкий план своего
+                            освобождения.
+                        </p>
+                    </div>
+                    <div class="block_sidebar_film_block float_film   revealator-slideright revealator-delay3 ">
+                        <div class="film_poster_two">
+                            <img src="image/2.jpg" alt="">
+                        </div>
+                        <span>Зеленая миля</span>
+                        <p>
+                            Пол Эджкомб — начальник блока смертников в тюрьме «Холодная гора», каждый из узников которого однажды проходит «зеленую милю»
+                            по пути к месту казни. Пол повидал много заключённых и надзирателей за время работы. Однако гигант
+                            Джон Коффи, обвинённый в страшном преступлении, стал одним из самых необычных обитателей блока.
+                        </p>
+                    </div>
+                    <div class="block_sidebar_film_block float_film   revealator-slideright revealator-delay2 ">
+                        <div class="film_poster_three">
+                            <img src="image/3.jpg" alt="">
+                        </div>
+                        <span>Леон</span>
+                        <p>
+                            Профессиональный убийца Леон, не знающий пощады и жалости, знакомится со своей очаровательной соседкой Матильдой, семью которой
+                            расстреливают полицейские, замешанные в торговле наркотиками. Благодаря этому знакомству он впервые
+                            испытывает чувство любви, но…',
+                        </p>
+                    </div>
+                    <div class="block_sidebar_film_block float_film no_padding   revealator-slideright revealator-delay4 ">
+                        <div class="film_poster_four">
+                            <img src="image/4.jpeg" alt="">
+                        </div>
+                        <span>Интерстеллар</span>
+                        <p>
+                            Когда засуха приводит человечество к продовольственному кризису, коллектив исследователей и учёных отправляется сквозь червоточину
+                            (которая предположительно соединяет области пространства-времени через большое расстояние) в
+                            путешествие, чтобы превзойти прежние ограничения для космических путешествий человека и переселить
+                            человечество на другую планету.
+                        </p>
+                    </div>
+                    <div class="clear"></div>
+
+                </div>
+                <div class="add_new_film" id="add_new_film"></div>
+                <div class="clear"></div>
             </div>
-            <div class="clear"></div>
             <div class="button_all_film">
                 <div class="all_film">
                     <p>
@@ -173,12 +233,14 @@
                 </div>
             </div>
         </div>
+        <div class="clear"></div>
     </div>
-    <div class="background_form"></div>
-    <div class="feedback_form">
+    <div class="clear"></div>
+    <div class="background_form cursor_pointer" id="blackForm"></div>
+    <div class="feedback_form" id="formWriteMe">
         <div class="main_text">
             <div class="text_label_test">
-                <img src="icon/cross.png" alt="X" class="cross">
+                <img src="icon/cross.png" alt="X" id="cross" class="cross cursor_pointer">
                 <p class="main_text_label">Напиши мне</div>
             <form action="">
                 <label for="input_text_name">
@@ -191,9 +253,10 @@
                     </p>
                 </label>
                 </br>
-                <input required='required' type="text" name="person_name" id="input_text_name" class="input_style text_format_input control" placeholder="Как тебя звать?">
+                <input type="text" name="person_name" id="input_text_name" class="input_style text_format_input control control_send"
+                    placeholder="Как тебя звать?">
                 </br>
-          <label for="input_email">
+                <label for="input_email">
                     <p class="text_format_label">Ваш email
                         <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="184px" height="19px">
                             <text kerning="auto" font-family="Myriad Pro" fill="rgb(0, 0, 0)" font-size="20px" x="0px" y="19px">
@@ -203,7 +266,8 @@
                     </p>
                 </label>
                 </br>
-                <input required='required' type="email" name="person_email" id="email" class="input_style text_format_input test control" placeholder="Введите ваш Email">
+                <input type="email" name="person_email" id="email" class="input_style text_format_input test control control_send"
+                    placeholder="Введите ваш Email">
                 </br>
                 <label for="">
                     <p class="text_format_label corection_location_label">Откуда вы?</p>
@@ -242,18 +306,81 @@
                     </p>
                 </label>
                 </br>
-                <textarea required='required' name="person_message" class="text_format_input control"></textarea>
+                <textarea name="person_message" class="text_format_input control control_send"></textarea>
                 </br>
                 <input type="submit" value="Отправить" id="send">
             </form>
-
         </div>
     </div>
     <footer>
         <p class="corrected_footer">&copy; 2006-2018 Поволжский государственный технологический&nbsp;университет, ФГБОУ ВО&nbsp;&laquo;ПГТУ&raquo;
         </p>
     </footer>
+    <div id="shadow_block_new_film" class="shadow_block_new_film close_New_Film_Block">
+
+    </div>
+    <div class="form_add_film" id="block_add_film">
+        <form action="">
+            <img src="icon/cross.png" alt="X" id="closeFormNewFilm" class="correct_cross close_New_Film_Block cursor_pointer">
+            <h1>Добавить фильм</h1>
+            <p class="text_format_label">
+                <label for="">URL фильма</label>
+                <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="19px" height="19px">
+                    <text kerning="auto" font-family="Myriad Pro" fill="rgb(0, 0, 0)" font-size="20px" x="0px" y="19px">
+                        <tspan font-size="20px" font-family="Open Sans" fill="#EE0707">*</tspan>
+                    </text>
+                </svg>
+            </p>
+            <input class="control_film control_film_value control text_format_input input_style" type="text" name="" id="urlNewFilm">
+            <p class="text_format_label">
+                <label for="">Название фильма</label>
+                <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="19px" height="19px">
+                    <text kerning="auto" font-family="Myriad Pro" fill="rgb(0, 0, 0)" font-size="20px" x="0px" y="19px">
+                        <tspan font-size="20px" font-family="Open Sans" fill="#EE0707">*</tspan>
+                    </text>
+                </svg>
+            </p>
+            <input class="control_film control text_format_input input_style control_film_value" type="text" name="" id="nameNewFIlm">
+            <p class="text_format_label">
+                <label for="">Описание фильма</label>
+                <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="19px" height="19px">
+                    <text kerning="auto" font-family="Myriad Pro" fill="rgb(0, 0, 0)" font-size="20px" x="0px" y="19px">
+                        <tspan font-size="20px" font-family="Open Sans" fill="#EE0707">*</tspan>
+                    </text>
+                </svg>
+            </p>
+            <textarea class="control_film text_format_input control control_film_value" name="" id="descriptionFilm" cols="30" rows="10"></textarea>
+            <button type="submit" id="addNewFIlm">Добавить</button>
+        </form>
+    </div>
+
     <script src="script/script.js"></script>
+
+    <script src="/script/jquery.js"></script>
+    <script src="node_modules/jquery-smooth-scroll/src/jquery.smooth-scroll.js"></script>
+    <script src="script/fm.revealator.jquery.js"></script>
+
+    <script src="script/scroll.js"></script>
+    <script src="script/new_film.js"></script>
+    <script src="script/mobile_menu.js"></script>
 </body>
 
 </html>
+
+<!--  
+
+    комплитид -1. Для плавной прокрутки использовать плагин Smooth Scroll.
+    2. Добавление фильмов работает неправильно: нельзя добавить несколько фильмов. Если доп. фильмы не открыты - ломается верстка, заменяются добавляемые фильмы.
+    3. Неправильная валидация формы добавления фильмов: пустые поля должны подсвечиваться сразу после alert'а об ошибке. При наведении красный Border должен сохраняться. Он убирается при focus'е.
+    4. Проставить cursor pointer на кликабельные элементы (мобильное меню, кнопка закрыть, кнопка Добавить)
+    5. Избавиться от дублирования мобильного меню.
+    6. При нажатии на ссылку "Любимые фильмы" в мобильном меню, меню должно сворачиваться, а страница прокручиваться к разделу.
+    7. jQuery-код перетаить в отдельный Js-файл. Функции из лабы про jQuery сделать на jQuery.
+
+-->
+
+
+
+<!-- 
+    https://sun9-9.userapi.com/c834701/u379514932/docs/d16/a37d13b1a421/gifka-cheshirskiy-kot-Alisa-v-strane-chudes-3111217.gif?extra=80Phlzvyb-yPkhRz1CbU00T7ImkLmexDb7vL--ApDCU6nbIILY8RttvE_ICwhloX0Q1TUIxGIRQc_hAgASp7QpFUgJyMjYYt7I16jtEfyb0hIk1XTigk6CN-E_RvsqTEA_K374LyAtC79Uqd
+ -->
